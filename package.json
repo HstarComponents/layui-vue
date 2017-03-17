@@ -1,0 +1,26 @@
+{
+  "name": "lv-ui",
+  "version": "0.0.1",
+  "description": "Layui vue version.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hstarorg/lv-ui.git"
+  },
+  "keywords": [
+    "Layui",
+    "Vue"
+  ],
+  "author": "Jay.M.Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hstarorg/lv-ui/issues"
+  },
+  "homepage": "https://github.com/hstarorg/lv-ui#readme"
+}
