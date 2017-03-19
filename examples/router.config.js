@@ -4,15 +4,17 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import {
-  Welcome,
+  WelcomePage,
 
-  Button
+  ButtonPage,
+  ProgressPage
 } from './pages';
 
 /* 路由配置 */
 const routes = [
-  { path: '', component: Welcome },
-  { path: '/button', component: Button }
+  { path: '', component: WelcomePage },
+  { path: '/button', component: ButtonPage },
+  { path: '/progress', component: ProgressPage }
   // { path: '/testresume', component: TestResumeDetail },
   // { path: '*', component: NotFoundPage }
 ];

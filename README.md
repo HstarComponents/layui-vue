@@ -16,7 +16,7 @@
 - [ ] Radio
 - [ ] DropDownList
 - [ ] Tabset 
-- [ ] Progress
+- [x] Progress
 - [ ] Accordion 
 - [ ] Table
 - [ ] Pagination

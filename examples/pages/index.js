@@ -1,9 +1,11 @@
-import Welcome from './Welcome.vue';
+import WelcomePage from './WelcomePage.vue';
 
-import Button from './Button.vue';
+import ButtonPage from './ButtonPage.vue';
+import ProgressPage from './ProgressPage.vue';
 
 export {
-  Welcome,
+  WelcomePage,
 
-  Button
+  ButtonPage,
+  ProgressPage
 };

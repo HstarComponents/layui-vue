@@ -35,10 +35,6 @@
               <dd class="">
                 <a href="/demo/nav.html">导航与面包屑</a>
               </dd>
-             
-              <dd class="">
-                <a href="/demo/progress.html">进度条</a>
-              </dd>
               <dd class="">
                 <a href="/demo/collapse.html">折叠面板</a>
               </dd>
@@ -152,7 +148,8 @@
           {
             name: '', text: '基本元素', current: true, children: [
               { name: 'button', text: '按钮组' },
-              { name: 'tab', text: '选项卡' }
+              { name: 'tab', text: '选项卡' },
+              { name: 'progress', text: '进度条' }
             ]
           }
         ],
