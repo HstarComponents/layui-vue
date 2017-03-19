@@ -10,6 +10,9 @@ import Radio from './forms/radio.vue';
 import Fieldset from './auxiliar/fieldset.vue';
 import Blockquote from './auxiliar/blockquote.vue';
 
+import Tabset from './tabset/tabset.vue';
+import TabItem from './tabset/tab-item.vue';
+
 export {
   Button,
   ButtonGroup,
@@ -21,7 +24,10 @@ export {
   Radio,
 
   Fieldset,
-  Blockquote
+  Blockquote,
+
+  Tabset,
+  TabItem
 };
 
 export const COMPONENTS = [
@@ -35,5 +41,8 @@ export const COMPONENTS = [
   Radio,
 
   Fieldset,
-  Blockquote
+  Blockquote,
+
+  Tabset,
+  TabItem
 ];

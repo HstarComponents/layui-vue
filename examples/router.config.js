@@ -5,11 +5,13 @@ Vue.use(VueRouter);
 
 import {
   WelcomePage,
+  NotFoundPage,
 
   ButtonPage,
   ProgressPage,
   FormsPage,
-  AuxiliarPage
+  AuxiliarPage,
+  TabPage
 } from './pages';
 
 /* 路由配置 */
@@ -18,9 +20,10 @@ const routes = [
   { path: '/button', component: ButtonPage },
   { path: '/progress', component: ProgressPage },
   { path: '/forms', component: FormsPage },
-  { path: '/auxiliar', component: AuxiliarPage }
+  { path: '/auxiliar', component: AuxiliarPage },
+  { path: '/tab', component: TabPage },
   // { path: '/testresume', component: TestResumeDetail },
-  // { path: '*', component: NotFoundPage }
+  { path: '*', component: NotFoundPage }
 ];
 
 /* 注册路由 */
