@@ -1,6 +1,6 @@
 <template>
   <div class="page-forms">
-    <lv-group header="简单表单控件">
+    <lv-fieldset header="简单表单控件">
       <form class="layui-form" action="">
         <div class="layui-form-item">
           <label class="layui-form-label">复选框</label>
@@ -42,7 +42,7 @@
           </div>
         </div>
       </form>
-    </lv-group>
+    </lv-fieldset>
   </div>
 </template>
 <script>

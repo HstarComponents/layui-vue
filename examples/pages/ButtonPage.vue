@@ -1,32 +1,32 @@
 <template>
   <div class="page-button">
-    <lv-group header="六种按钮主题">
+    <lv-fieldset header="六种按钮主题">
       <lv-button type="primary" @click="onButtonClick($event)">原始按钮</lv-button>
       <lv-button>默认按钮</lv-button>
       <lv-button type="normal">白搭按钮</lv-button>
       <lv-button type="warm">暖色按钮</lv-button>
       <lv-button type="danger">警告按钮</lv-button>
       <lv-button :disabled="true" @click="onButtonClick($event)">警告按钮</lv-button>
-    </lv-group>
-    <lv-group header="四种按钮尺寸" class="site-demo-button">
+    </lv-fieldset>
+    <lv-fieldset header="四种按钮尺寸" class="site-demo-button">
       <template v-for="t in types">
         <template v-for="s in sizes">
           <lv-button :type="t" :size="s.name">{{s.text}}</lv-button>
         </template>
         <br>
       </template>
-    </lv-group>
-    <lv-group header="圆角按钮">
+    </lv-fieldset>
+    <lv-fieldset header="圆角按钮">
       <lv-button :radius="true">圆角按钮</lv-button>
       <lv-button :radius="true" size="big">圆角大按钮</lv-button>
       <lv-button :radius="true" size="small" type="danger">圆角小型危险按钮</lv-button>
-    </lv-group>
-    <lv-group header="带图标的按钮">
+    </lv-fieldset>
+    <lv-fieldset header="带图标的按钮">
       <lv-button :radius="true"><i class="fa fa-lock"></i> 锁定按钮</lv-button>
       <lv-button :radius="true" size="small" type="danger"><i class="fa fa-user"></i> 用户按钮</lv-button>
       <lv-button type="warm"><i class="fa fa-spin fa-star"></i> 旋转图标按钮</lv-button>
-    </lv-group>
-    <lv-group header="按钮组">
+    </lv-fieldset>
+    <lv-fieldset header="按钮组">
       <lv-button-group size="mini" :type="groupType">
         <lv-button>增加</lv-button>
         <lv-button>编辑</lv-button>
@@ -37,7 +37,7 @@
         <lv-button><i class="fa fa-minus"></i></lv-button>
         <lv-button><i class="fa fa-remove"></i></lv-button>
       </lv-button-group>
-    </lv-group>
+    </lv-fieldset>
   </div>
 </template>
 <script>

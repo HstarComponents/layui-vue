@@ -23,6 +23,8 @@
 - [ ] Tree
 - [ ] ToolBox
 - [ ] CodeBlock
+- [x] Fieldset
+- [x] Blockquote
 
 ## Other
 

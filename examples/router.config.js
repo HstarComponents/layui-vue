@@ -8,7 +8,8 @@ import {
 
   ButtonPage,
   ProgressPage,
-  FormsPage
+  FormsPage,
+  AuxiliarPage
 } from './pages';
 
 /* 路由配置 */
@@ -16,7 +17,8 @@ const routes = [
   { path: '', component: WelcomePage },
   { path: '/button', component: ButtonPage },
   { path: '/progress', component: ProgressPage },
-  { path: '/forms', component: FormsPage }
+  { path: '/forms', component: FormsPage },
+  { path: '/auxiliar', component: AuxiliarPage }
   // { path: '/testresume', component: TestResumeDetail },
   // { path: '*', component: NotFoundPage }
 ];

@@ -15,7 +15,7 @@
   <div id="app" class="layui-layout layui-layout-admin">
     <div class="layui-header header header-demo">
       <div class="layui-main">
-        <a class="logo" href="/">
+        <a class="logo" href="">
           <h1><strong>LV-UI</strong> LayUI的Vue2封装</h1>
         </a>
       </div>
@@ -147,7 +147,8 @@
               { name: 'button', text: '按钮组' },
               { name: 'tab', text: '选项卡' },
               { name: 'progress', text: '进度条' },
-              { name: 'forms', text: '表单集合' }
+              { name: 'forms', text: '表单集合' },
+              { name: 'auxiliar', text: '简单辅助元素' }
             ]
           }
         ],
