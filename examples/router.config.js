@@ -23,7 +23,7 @@ const routes = [
 
 /* 注册路由 */
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes
 });
 
