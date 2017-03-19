@@ -1,8 +1,12 @@
 <template>
   <div class="page-progress">
     <lv-group header="进度条风格">
-      <input type="number" v-model.number="value">
-      <br><br>
+      <div class="layui-form-item">
+        <label class="layui-form-label">进度条值：</label>
+        <div class="layui-input-block">
+          <input type="number" v-model.number="value" class="layui-input">
+        </div>
+      </div>
       <lv-progress bg-color="#FF5722" :value="value"></lv-progress>
       <br>
       <lv-progress bg-color="#F7B824" :value="value"></lv-progress>

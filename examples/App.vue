@@ -30,9 +30,6 @@
                 <router-link :to="m2.name">{{m2.text}}</router-link>
               </dd>
               <!--<dd class="">
-                <a href="/demo/form.html">表单集合</a>
-              </dd>
-              <dd class="">
                 <a href="/demo/nav.html">导航与面包屑</a>
               </dd>
               <dd class="">
@@ -149,7 +146,8 @@
             name: '', text: '基本元素', current: true, children: [
               { name: 'button', text: '按钮组' },
               { name: 'tab', text: '选项卡' },
-              { name: 'progress', text: '进度条' }
+              { name: 'progress', text: '进度条' },
+              { name: 'forms', text: '表单集合' }
             ]
           }
         ],

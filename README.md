@@ -11,9 +11,9 @@
 
 - [x] Button
 - [x] Button Group
-- [ ] Switch
-- [ ] Checkbox
-- [ ] Radio
+- [x] Switch
+- [x] Checkbox
+- [x] Radio
 - [ ] DropDownList
 - [ ] Tabset 
 - [x] Progress

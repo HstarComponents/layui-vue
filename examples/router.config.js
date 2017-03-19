@@ -7,14 +7,16 @@ import {
   WelcomePage,
 
   ButtonPage,
-  ProgressPage
+  ProgressPage,
+  FormsPage
 } from './pages';
 
 /* 路由配置 */
 const routes = [
   { path: '', component: WelcomePage },
   { path: '/button', component: ButtonPage },
-  { path: '/progress', component: ProgressPage }
+  { path: '/progress', component: ProgressPage },
+  { path: '/forms', component: FormsPage }
   // { path: '/testresume', component: TestResumeDetail },
   // { path: '*', component: NotFoundPage }
 ];
