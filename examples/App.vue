@@ -1,12 +1,14 @@
-<style>
-  .logo h1 strong {
-    font-size: 30px;
-    font-family: 宋体;
-    color: darkorange;
-  }
-  
+<style lang="stylus">
   .logo {
     color: antiquewhite;
+    h1 strong {
+      font-size: 30px;
+      color: darkorange;
+    }
+  }
+  
+  .layui-body.site-demo {
+    padding: 10px !important;
   }
 </style>
 <template>
@@ -130,9 +132,8 @@
     </div>
     <div class="layui-footer footer footer-demo">
       <div class="layui-main">
-        <p>2017 © <a href="/">hstarorg</a> MIT license</p>
         <p>
-          <a href="https://github.com/hstarorg/lv-ui/" target="_blank">Git仓库</a>
+          2017 © <a href="https://github.com/hstarorg/">hstarorg</a> <a href="https://github.com/hstarorg/lv-ui/" target="_blank">Git仓库</a>
         </p>
       </div>
     </div>

@@ -9,8 +9,8 @@
 
 ## Components
 
-- [ ] Button
-- [ ] Button Group
+- [x] Button
+- [x] Button Group
 - [ ] Switch
 - [ ] Checkbox
 - [ ] Radio

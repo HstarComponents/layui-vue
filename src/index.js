@@ -1,6 +1,4 @@
-const COMPONENTS = [
-
-];
+import { COMPONENTS } from './components';
 
 const install = function (Vue, options = {}) {
   COMPONENTS.forEach(c => {
@@ -17,4 +15,4 @@ const lvUI = {
   version: require('./../package.json').version
 };
 
-module.exports = Object.assign(lvUI, { install });
+export default Object.assign(lvUI, { install });
