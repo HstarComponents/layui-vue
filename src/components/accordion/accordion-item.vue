@@ -1,8 +1,8 @@
 <template>
   <div class="lv-accordion-item layui-colla-item">
     <h2 class="layui-colla-title" @click="toggleStatus">
-      <template v-if="!$slots.title">{{title}}</template>
-      <slot name="title"></slot>
+      <template v-if="!$slots.header">{{header}}</template>
+      <slot name="header"></slot>
       <i class="layui-icon layui-colla-icon">{{shown ? '': ''}}</i>
     </h2>
     <div class="layui-colla-content" :class="{'layui-show': shown}">
@@ -14,7 +14,7 @@
   export default {
     name: 'lv-accordion-item',
     props: {
-      title: { type: String, default: '' },
+      header: { type: String, default: '' },
       active: { type: Boolean, default: false }
     },
     data() {

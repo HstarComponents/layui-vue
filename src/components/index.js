@@ -18,6 +18,9 @@ import AccordionItem from './accordion/accordion-item.vue';
 
 import DropDownList from './dropdownlist/drop-down-list.vue';
 
+import Table from './table/table.vue';
+import TableColumn from './table/table-column.vue';
+
 export {
   Button,
   ButtonGroup,
@@ -37,7 +40,10 @@ export {
   Accordion,
   AccordionItem,
 
-  DropDownList
+  DropDownList,
+
+  Table,
+  TableColumn
 };
 
 export const COMPONENTS = [
@@ -59,5 +65,8 @@ export const COMPONENTS = [
   Accordion,
   AccordionItem,
 
-  DropDownList
+  DropDownList,
+
+  Table,
+  TableColumn
 ];

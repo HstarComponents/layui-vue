@@ -14,11 +14,11 @@
 - [x] Switch
 - [x] Checkbox
 - [x] Radio
-- [ ] DropDownList
+- [x] DropDownList
 - [x] Tabset 
 - [x] Progress
 - [x] Accordion 
-- [ ] Table
+- [x] Table
 - [ ] Pagination
 - [ ] Tree
 - [ ] ToolBox
