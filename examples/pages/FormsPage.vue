@@ -41,6 +41,15 @@
             <lv-radio v-model="radioValue" val="禁用" :disabled="true">禁用</lv-radio>
           </div>
         </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">选择框</label>
+          <div class="layui-input-inline">
+            <lv-drop-down-list label="请选择" :data-source="items" v-model="selectValue"></lv-drop-down-list>
+          </div>
+          <div class="layui-input-inline">
+            <lv-drop-down-list label="请选择" :data-source="item2" v-model="selectValue"></lv-drop-down-list>
+          </div>
+        </div>
       </form>
     </lv-fieldset>
   </div>
@@ -50,8 +59,16 @@
     data() {
       return {
         checked: true,
-        radioValue: '男'
+        radioValue: '男',
+        items: ['北京', '上海', '广州', '深圳', '成都'],
+        item2: [{ value: '北京', text: '北京', disabled: true }, { value: '成都', text: '成都' }],
+        selectValue: '成都'
       };
+    },
+    mounted() {
+      setTimeout(() => {
+        this.selectValue = '北京';
+      }, 2000);
     }
   };
 

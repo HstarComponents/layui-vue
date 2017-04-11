@@ -16,6 +16,8 @@ import TabItem from './tabset/tab-item.vue';
 import Accordion from './accordion/accordion.vue';
 import AccordionItem from './accordion/accordion-item.vue';
 
+import DropDownList from './dropdownlist/drop-down-list.vue';
+
 export {
   Button,
   ButtonGroup,
@@ -33,7 +35,9 @@ export {
   TabItem,
 
   Accordion,
-  AccordionItem
+  AccordionItem,
+
+  DropDownList
 };
 
 export const COMPONENTS = [
@@ -51,7 +55,9 @@ export const COMPONENTS = [
 
   Tabset,
   TabItem,
-  
+
   Accordion,
-  AccordionItem
+  AccordionItem,
+
+  DropDownList
 ];
