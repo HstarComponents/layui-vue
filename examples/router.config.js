@@ -11,7 +11,9 @@ import {
   ProgressPage,
   FormsPage,
   AuxiliarPage,
-  TabPage
+  TabPage,
+  AccordionPage,
+  TablePage
 } from './pages';
 
 /* 路由配置 */
@@ -22,7 +24,8 @@ const routes = [
   { path: '/forms', component: FormsPage },
   { path: '/auxiliar', component: AuxiliarPage },
   { path: '/tab', component: TabPage },
-  // { path: '/testresume', component: TestResumeDetail },
+  { path: '/accordion', component: AccordionPage },
+  { path: '/table', component: TablePage },
   { path: '*', component: NotFoundPage }
 ];
 

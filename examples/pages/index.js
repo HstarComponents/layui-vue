@@ -6,6 +6,8 @@ import ProgressPage from './ProgressPage.vue';
 import FormsPage from './FormsPage.vue';
 import AuxiliarPage from './AuxiliarPage.vue';
 import TabPage from './TabPage.vue';
+import AccordionPage from './AccordionPage.vue';
+import TablePage from './TablePage.vue';
 
 export {
   WelcomePage,
@@ -15,5 +17,7 @@ export {
   ProgressPage,
   FormsPage,
   AuxiliarPage,
-  TabPage
+  TabPage,
+  AccordionPage,
+  TablePage
 };

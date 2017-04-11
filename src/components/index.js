@@ -13,6 +13,9 @@ import Blockquote from './auxiliar/blockquote.vue';
 import Tabset from './tabset/tabset.vue';
 import TabItem from './tabset/tab-item.vue';
 
+import Accordion from './accordion/accordion.vue';
+import AccordionItem from './accordion/accordion-item.vue';
+
 export {
   Button,
   ButtonGroup,
@@ -27,7 +30,10 @@ export {
   Blockquote,
 
   Tabset,
-  TabItem
+  TabItem,
+
+  Accordion,
+  AccordionItem
 };
 
 export const COMPONENTS = [
@@ -44,5 +50,8 @@ export const COMPONENTS = [
   Blockquote,
 
   Tabset,
-  TabItem
+  TabItem,
+  
+  Accordion,
+  AccordionItem
 ];
