@@ -1,5 +1,5 @@
 <template>
-  <div class="layui-unselect layui-form-select" :class="{'layui-form-selected': open}" @click.stop="">
+  <div class="lv-drop-down-list layui-unselect layui-form-select" :class="{'layui-form-selected': open}" @click.stop="">
     <div class="layui-select-title" @click="openDialog">
       <input type="text" :placeholder="label" value="" readonly="" class="layui-input layui-unselect" v-model="innerText">
       <i class="layui-edge"></i>

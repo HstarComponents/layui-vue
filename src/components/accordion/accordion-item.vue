@@ -1,5 +1,5 @@
 <template>
-  <div class="layui-colla-item">
+  <div class="lv-accordion-item layui-colla-item">
     <h2 class="layui-colla-title" @click="toggleStatus">
       <template v-if="!$slots.title">{{title}}</template>
       <slot name="title"></slot>

@@ -1,5 +1,5 @@
 <template>
-  <div class="layui-unselect layui-form-radio" :class="{'layui-form-radioed': checked, 'layui-radio-disbaled layui-disabled': disabled}"
+  <div class="lv-radio layui-unselect layui-form-radio" :class="{'layui-form-radioed': checked, 'layui-radio-disbaled layui-disabled': disabled}"
     @click="changeStatus">
     <i class="layui-anim layui-icon"></i>
     <span><slot></slot></span>
