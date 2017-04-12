@@ -15,7 +15,8 @@ import {
   AccordionPage,
   TablePage,
 
-  PaginationPage
+  PaginationPage,
+  TreePage
 } from './pages';
 
 /* 路由配置 */
@@ -29,6 +30,7 @@ const routes = [
   { path: '/accordion', component: AccordionPage },
   { path: '/table', component: TablePage },
   { path: '/pagination', component: PaginationPage },
+  { path: '/tree', component: TreePage },
   { path: '*', component: NotFoundPage }
 ];
 

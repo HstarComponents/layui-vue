@@ -154,7 +154,8 @@
             ]
           }, {
             name: '', text: '组件示例', current: true, children: [
-              { name: 'pagination', text: '多功能分页' }
+              { name: 'pagination', text: '多功能分页' },
+              { name: 'tree', text: '树形菜单' }
             ]
           }
         ],

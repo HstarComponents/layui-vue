@@ -23,6 +23,8 @@ import TableColumn from './table/table-column.vue';
 
 import Pagination from './pagination/pagination.vue';
 
+import Tree from './tree/tree.vue';
+
 export {
   Button, ButtonGroup,
   Progress,
@@ -32,7 +34,8 @@ export {
   Accordion, AccordionItem,
   DropDownList,
   Table, TableColumn,
-  Pagination
+  Pagination,
+  Tree
 };
 
 export const COMPONENTS = [
@@ -44,5 +47,6 @@ export const COMPONENTS = [
   Accordion, AccordionItem,
   DropDownList,
   Table, TableColumn,
-  Pagination
+  Pagination,
+  Tree
 ];

@@ -10,6 +10,7 @@ import AccordionPage from './AccordionPage.vue';
 import TablePage from './TablePage.vue';
 
 import PaginationPage from './PaginationPage.vue';
+import TreePage from './TreePage.vue';
 
 export {
   WelcomePage,
@@ -23,5 +24,6 @@ export {
   AccordionPage,
   TablePage,
 
-  PaginationPage
+  PaginationPage,
+  TreePage
 };
