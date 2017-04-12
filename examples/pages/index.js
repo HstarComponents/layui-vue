@@ -9,6 +9,8 @@ import TabPage from './TabPage.vue';
 import AccordionPage from './AccordionPage.vue';
 import TablePage from './TablePage.vue';
 
+import PaginationPage from './PaginationPage.vue';
+
 export {
   WelcomePage,
   NotFoundPage,
@@ -19,5 +21,7 @@ export {
   AuxiliarPage,
   TabPage,
   AccordionPage,
-  TablePage
+  TablePage,
+
+  PaginationPage
 };

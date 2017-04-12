@@ -13,7 +13,9 @@ import {
   AuxiliarPage,
   TabPage,
   AccordionPage,
-  TablePage
+  TablePage,
+
+  PaginationPage
 } from './pages';
 
 /* 路由配置 */
@@ -26,6 +28,7 @@ const routes = [
   { path: '/tab', component: TabPage },
   { path: '/accordion', component: AccordionPage },
   { path: '/table', component: TablePage },
+  { path: '/pagination', component: PaginationPage },
   { path: '*', component: NotFoundPage }
 ];
 

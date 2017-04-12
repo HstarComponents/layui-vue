@@ -12,12 +12,10 @@
   }
 </style>
 <template>
-  <div id="app"
-       class="layui-layout layui-layout-admin">
+  <div id="app" class="layui-layout layui-layout-admin">
     <div class="layui-header header header-demo">
       <div class="layui-main">
-        <a class="logo"
-           href="">
+        <a class="logo" href="">
           <h1><strong>LV-UI</strong> LayUI的Vue2封装</h1>
         </a>
       </div>
@@ -25,17 +23,10 @@
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
         <ul class="layui-nav layui-nav-tree site-demo-nav">
-          <li class="layui-nav-item"
-              :class="{'layui-nav-itemed': m1.current}"
-              v-for="m1 in menuData"
-              @click="m1.current = !m1.current">
-            <a class="javascript:;"
-               href="javascript:;">{{m1.text}}<span class="layui-nav-more"></span></a>
-            <dl class="layui-nav-child"
-                v-if="m1.children && m1.children.length > 0">
-              <dd :class="{'layui-this': m2.current}"
-                  v-for="m2 in m1.children"
-                  @click="setCurrentMenu(m2, $event)">
+          <li class="layui-nav-item" :class="{'layui-nav-itemed': m1.current}" v-for="m1 in menuData" @click="m1.current = !m1.current">
+            <a class="javascript:;" href="javascript:;">{{m1.text}}<span class="layui-nav-more"></span></a>
+            <dl class="layui-nav-child" v-if="m1.children && m1.children.length > 0">
+              <dd :class="{'layui-this': m2.current}" v-for="m2 in m1.children" @click="setCurrentMenu(m2, $event)">
                 <router-link :to="m2.name">{{m2.text}}</router-link>
               </dd>
               <!--<dd class="">
@@ -52,7 +43,7 @@
                 </dd>-->
             </dl>
           </li>
-  
+
           <!--<li class="layui-nav-item layui-nav-itemed">
               <a class="javascript:;" href="javascript:;">组件示例<span class="layui-nav-more"></span></a>
               <dl class="layui-nav-child">
@@ -124,11 +115,9 @@
                 </dd>
               </dl>
             </li>-->
-  
-          <li class="layui-nav-item"
-              style="height: 30px; text-align: center"></li>
-          <span class="layui-nav-bar"
-                style="top: 472.5px; height: 0px; opacity: 0;"></span></ul>
+
+          <li class="layui-nav-item" style="height: 30px; text-align: center"></li>
+          <span class="layui-nav-bar" style="top: 472.5px; height: 0px; opacity: 0;"></span></ul>
       </div>
     </div>
     <div class="layui-body site-demo">
@@ -137,8 +126,7 @@
     <div class="layui-footer footer footer-demo">
       <div class="layui-main">
         <p>
-          2017 © <a href="https://github.com/hstarorg/">hstarorg</a> <a href="https://github.com/hstarorg/lv-ui/"
-             target="_blank">Git仓库</a>
+          2017 © <a href="https://github.com/hstarorg/">hstarorg</a> <a href="https://github.com/hstarorg/lv-ui/" target="_blank">Git仓库</a>
         </p>
       </div>
     </div>
@@ -150,33 +138,37 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      menuData: [
-        {
-          name: '', text: '基本元素', current: true, children: [
-            { name: 'button', text: '按钮组' },
-            { name: 'tab', text: '选项卡' },
-            { name: 'progress', text: '进度条' },
-            { name: 'forms', text: '表单集合' },
-            { name: 'auxiliar', text: '简单辅助元素' },
-            { name: 'accordion', text: '折叠面板' },
-            { name: 'table', text: '基本表格' }
-          ]
-        }
-      ],
-      prevMenu: null
-    };
-  },
-  methods: {
-    setCurrentMenu(menu, evt) {
-      evt && evt.stopPropagation();
-      this.prevMenu && this.$set(this.prevMenu, 'current', false);
-      this.$set(menu, 'current', true);
-      this.prevMenu = menu;
+  export default {
+    data() {
+      return {
+        menuData: [
+          {
+            name: '', text: '基本元素', current: true, children: [
+              { name: 'button', text: '按钮组' },
+              { name: 'tab', text: '选项卡' },
+              { name: 'progress', text: '进度条' },
+              { name: 'forms', text: '表单集合' },
+              { name: 'auxiliar', text: '简单辅助元素' },
+              { name: 'accordion', text: '折叠面板' },
+              { name: 'table', text: '基本表格' }
+            ]
+          }, {
+            name: '', text: '组件示例', current: true, children: [
+              { name: 'pagination', text: '多功能分页' }
+            ]
+          }
+        ],
+        prevMenu: null
+      };
+    },
+    methods: {
+      setCurrentMenu(menu, evt) {
+        evt && evt.stopPropagation();
+        this.prevMenu && this.$set(this.prevMenu, 'current', false);
+        this.$set(menu, 'current', true);
+        this.prevMenu = menu;
+      }
     }
   }
-}
 
 </script>

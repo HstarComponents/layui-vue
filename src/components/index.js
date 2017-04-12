@@ -21,52 +21,28 @@ import DropDownList from './dropdownlist/drop-down-list.vue';
 import Table from './table/table.vue';
 import TableColumn from './table/table-column.vue';
 
+import Pagination from './pagination/pagination.vue';
+
 export {
-  Button,
-  ButtonGroup,
-
+  Button, ButtonGroup,
   Progress,
-
-  Checkbox,
-  Switch,
-  Radio,
-
-  Fieldset,
-  Blockquote,
-
-  Tabset,
-  TabItem,
-
-  Accordion,
-  AccordionItem,
-
+  Checkbox, Switch, Radio,
+  Fieldset, Blockquote,
+  Tabset, TabItem,
+  Accordion, AccordionItem,
   DropDownList,
-
-  Table,
-  TableColumn
+  Table, TableColumn,
+  Pagination
 };
 
 export const COMPONENTS = [
-  Button,
-  ButtonGroup,
-
+  Button, ButtonGroup,
   Progress,
-
-  Checkbox,
-  Switch,
-  Radio,
-
-  Fieldset,
-  Blockquote,
-
-  Tabset,
-  TabItem,
-
-  Accordion,
-  AccordionItem,
-
+  Checkbox, Switch, Radio,
+  Fieldset, Blockquote,
+  Tabset, TabItem,
+  Accordion, AccordionItem,
   DropDownList,
-
-  Table,
-  TableColumn
+  Table, TableColumn,
+  Pagination
 ];
