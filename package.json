@@ -1,8 +1,8 @@
 {
   "name": "lv-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Layui vue version.",
-  "main": "index.js",
+  "main": "src/index.js",
   "directories": {
     "example": "examples"
   },
