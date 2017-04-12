@@ -9,16 +9,15 @@
       <thead>
         <tr>
           <th v-if="showCheckbox">
-            <input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose">
-            <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i class="layui-icon"></i></div>
+            <lv-checkbox v-model="allChecked"></lv-checkbox>
           </th>
           <th v-for="col in columns">{{col.header}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in dataSource">
-          <td v-if="showCheckbox"><input type="checkbox" name="" lay-skin="primary">
-            <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i class="layui-icon"></i></div>
+        <tr v-for="(row, idx) in dataSource">
+          <td v-if="showCheckbox">
+            <lv-checkbox v-model="selectedItems[idx].selected"></lv-checkbox>
           </td>
           <td v-for="col in columns">{{row[col.field]}}</td>
         </tr>
@@ -32,14 +31,19 @@
     name: 'lv-table',
     props: {
       dataSource: { type: Array, default: () => [] },
-      showCheckbox: { type: Boolean, default: true },
+      showCheckbox: { type: Boolean, default: false },
       showRowBorder: { type: Boolean, default: true },
       showColumnBorder: { type: Boolean, default: true }
     },
     data() {
       return {
-        columns: []
+        columns: [],
+        allChecked: false,
+        selectedItems: []
       };
+    },
+    created() {
+      this.syncSelectedItems();
     },
     computed: {
       skin() {
@@ -54,7 +58,21 @@
         }
       }
     },
-    mounted() {
+    watch: {
+      dataSource() {
+        this.syncSelectedItems();
+      },
+      allChecked(newVal) {
+        this.selectedItems.forEach(item => item.selected = newVal);
+      }
+    },
+    methods: {
+      syncSelectedItems() {
+        this.selectedItems = this.dataSource.map((item, i) => ({ selected: false, item, index: i }));
+      },
+      getSelectedItems() {
+        return this.selectedItems.filter(item => item.selected);
+      }
     }
   };
 
