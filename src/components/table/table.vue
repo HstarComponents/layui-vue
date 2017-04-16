@@ -1,6 +1,8 @@
 <template>
   <div class="lv-table layui-form">
-    <slot></slot>
+    <div v-if="!inited">
+      <slot></slot>
+    </div>
     <table class="layui-table" :lay-skin="skin">
       <colgroup>
         <col width="50" v-if="showCheckbox">
@@ -20,7 +22,7 @@
           <td v-if="showCheckbox"><input type="checkbox" name="" lay-skin="primary">
             <div class="layui-unselect layui-form-checkbox" lay-skin="primary"><i class="layui-icon"></i></div>
           </td>
-          <td v-for="col in columns">{{row[col.field]}}</td>
+          <td v-for="col in columns">{{renderColumnText(row, col.field, col.render)}}</td>
         </tr>
       </tbody>
     </table>
@@ -38,8 +40,12 @@
     },
     data() {
       return {
+        inited: false,
         columns: []
       };
+    },
+    mounted() {
+      this.inited = true;
     },
     computed: {
       skin() {
@@ -54,7 +60,13 @@
         }
       }
     },
-    mounted() {
+    methods: {
+      renderColumnText(rowData, field, render) {
+        if (typeof render === 'function') {
+          return render(rowData);
+        }
+        return rowData[field];
+      }
     }
   };
 

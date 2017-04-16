@@ -1,6 +1,6 @@
 <template>
   <div class="lv-table-column">
-
+    <slot></slot>
   </div>
 </template>
 <script>
@@ -9,7 +9,8 @@
     props: {
       header: { type: String, default: '' },
       field: { type: String },
-      width: { type: String }
+      width: { type: String },
+      render: { type: Function }
     },
     created() {
       if (!this.$parent || !this.$parent.$options || this.$parent.$options._componentTag !== 'lv-table') {
