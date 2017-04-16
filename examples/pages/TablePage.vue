@@ -1,6 +1,31 @@
 <template>
   <div class="page-table">
-    <lv-table :dataSource="dataSource" :showRowBorder="true" :showColumnBorder="false">
+    <lv-fieldset header="默认表格" :is-title="true"></lv-fieldset>
+    <lv-table :dataSource="dataSource" :showCheckbox="true">
+      <lv-table-column header="人物" width="150" field="name"></lv-table-column>
+      <lv-table-column header="民族" width="150" field="nation"></lv-table-column>
+      <lv-table-column header="出场时间" width="150" field="date"></lv-table-column>
+      <lv-table-column header="格言" field="motto"></lv-table-column>
+    </lv-table>
+    <br>
+    <lv-fieldset header="行边框表格" :is-title="true"></lv-fieldset>
+    <lv-table :dataSource="dataSource" :showColumnBorder="false">
+      <lv-table-column header="人物" width="150" field="name"></lv-table-column>
+      <lv-table-column header="民族" width="150" field="nation"></lv-table-column>
+      <lv-table-column header="出场时间" width="150" field="date"></lv-table-column>
+      <lv-table-column header="格言" field="motto"></lv-table-column>
+    </lv-table>
+    <br>
+    <lv-fieldset header="列边框表格" :is-title="true"></lv-fieldset>
+    <lv-table :dataSource="dataSource" :showRowBorder="false">
+      <lv-table-column header="人物" width="150" field="name"></lv-table-column>
+      <lv-table-column header="民族" width="150" field="nation"></lv-table-column>
+      <lv-table-column header="出场时间" width="150" field="date"></lv-table-column>
+      <lv-table-column header="格言" field="motto"></lv-table-column>
+    </lv-table>
+    <br>
+    <lv-fieldset header="无边框表格" :is-title="true"></lv-fieldset>
+    <lv-table :dataSource="dataSource" :showColumnBorder="false" :showRowBorder="false">
       <lv-table-column header="人物" width="150" field="name"></lv-table-column>
       <lv-table-column header="民族" width="150" field="nation"></lv-table-column>
       <lv-table-column header="出场时间" width="150" field="date"></lv-table-column>

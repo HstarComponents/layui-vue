@@ -19,10 +19,8 @@
 - [x] Progress
 - [x] Accordion 
 - [x] Table
-- [ ] Pagination
-- [ ] Tree
-- [ ] ToolBox
-- [ ] CodeBlock
+- [x] Pagination
+- [x] Tree
 - [x] Fieldset
 - [x] Blockquote
 
