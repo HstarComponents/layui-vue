@@ -2,13 +2,14 @@
   "name": "lv-ui",
   "version": "0.1.0",
   "description": "Layui vue version.",
-  "main": "src/index.js",
+  "main": "release/lv-ui.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dist": "webpack --config ./webpack.dist.js --progress --hide-modules",
     "test": "test"
   },
   "repository": {

@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 const lvUI = {
-  version: require('./../package.json').version
+  version: '0.1.0'
 };
 
 export default Object.assign(lvUI, { install });
