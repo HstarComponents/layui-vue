@@ -25,6 +25,8 @@ import Pagination from './pagination/pagination.vue';
 
 import Tree from './tree/tree.vue';
 
+import Date from './date/date.vue';
+
 export {
   Button, ButtonGroup,
   Progress,
@@ -35,7 +37,8 @@ export {
   DropDownList,
   Table, TableColumn,
   Pagination,
-  Tree
+  Tree,
+  Date
 };
 
 export const COMPONENTS = [
@@ -48,5 +51,6 @@ export const COMPONENTS = [
   DropDownList,
   Table, TableColumn,
   Pagination,
-  Tree
+  Tree,
+  Date
 ];

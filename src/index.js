@@ -1,8 +1,12 @@
 import { COMPONENTS } from './components';
+import { DIRECTIVES } from './directives';
 
 const install = function (Vue, options = {}) {
   COMPONENTS.forEach(c => {
     Vue.component(c.name, c);
+  });
+  DIRECTIVES.forEach(d => {
+    Vue.directive(d.name, d);
   });
 };
 

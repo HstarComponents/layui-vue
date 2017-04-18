@@ -12,6 +12,8 @@ import TablePage from './TablePage.vue';
 import PaginationPage from './PaginationPage.vue';
 import TreePage from './TreePage.vue';
 
+import LayDatePage from './LayDatePage.vue';
+
 export {
   WelcomePage,
   NotFoundPage,
@@ -25,5 +27,7 @@ export {
   TablePage,
 
   PaginationPage,
-  TreePage
+  TreePage,
+
+  LayDatePage
 };

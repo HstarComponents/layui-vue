@@ -16,7 +16,9 @@ import {
   TablePage,
 
   PaginationPage,
-  TreePage
+  TreePage,
+
+  LayDatePage
 } from './pages';
 
 /* 路由配置 */
@@ -31,6 +33,7 @@ const routes = [
   { path: '/table', component: TablePage },
   { path: '/pagination', component: PaginationPage },
   { path: '/tree', component: TreePage },
+  { path: '/laydate', component: LayDatePage },
   { path: '*', component: NotFoundPage }
 ];
 
