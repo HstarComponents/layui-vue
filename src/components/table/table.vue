@@ -21,7 +21,7 @@
           <td v-if="showCheckbox">
             <lv-checkbox v-model="selectedItems[idx].selected"></lv-checkbox>
           </td>
-          <td v-for="col in columns">{{renderColumnText(row, col.field, col.render)}}</td>
+          <td v-for="col in columns" v-html="renderColumnText(row, col.field, col.render)"></td>
         </tr>
       </tbody>
     </table>

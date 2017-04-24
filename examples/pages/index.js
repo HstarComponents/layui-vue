@@ -14,6 +14,8 @@ import TreePage from './TreePage.vue';
 
 import LayDatePage from './LayDatePage.vue';
 
+import ModalPage from './ModalPage.vue';
+
 export {
   WelcomePage,
   NotFoundPage,
@@ -29,5 +31,7 @@ export {
   PaginationPage,
   TreePage,
 
-  LayDatePage
+  LayDatePage,
+
+  ModalPage
 };

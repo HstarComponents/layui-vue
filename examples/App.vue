@@ -8,6 +8,7 @@
   }
   
   .layui-body.site-demo {
+    z-index: 1000;
     padding: 10px !important;
   }
 </style>
@@ -29,18 +30,6 @@
               <dd :class="{'layui-this': m2.current}" v-for="m2 in m1.children" @click="setCurrentMenu(m2, $event)">
                 <router-link :to="m2.name">{{m2.text}}</router-link>
               </dd>
-              <!--<dd class="">
-                  <a href="/demo/nav.html">导航与面包屑</a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/collapse.html">折叠面板</a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/table.html">基本表格</a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/auxiliar.html">简单辅助元素</a>
-                </dd>-->
             </dl>
           </li>
 
@@ -60,18 +49,6 @@
                   </a>
                 </dd>
                 <dd class="">
-                  <a href="/demo/laydate.html">
-                    <i class="layui-icon" style="top: 1px;"></i>
-                    <cite>日期时间选择</cite>
-                  </a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/laypage.html">
-                    <i class="layui-icon"></i>
-                    <cite>多功能分页</cite>
-                  </a>
-                </dd>
-                <dd class="">
                   <a href="/demo/laytpl.html">
                     <i class="layui-icon"></i>
                     <cite>模板引擎</cite>
@@ -87,18 +64,6 @@
                   <a href="/demo/upload.html">
                     <i class="layui-icon"></i>
                     <cite>文件上传</cite>
-                  </a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/tree.html">
-                    <i class="layui-icon"></i>
-                    <cite>树形菜单</cite>
-                  </a>
-                </dd>
-                <dd class="">
-                  <a href="/demo/util.html">
-                    <i class="layui-icon"></i>
-                    <cite>工具块</cite>
                   </a>
                 </dd>
                 <dd class="">
@@ -156,7 +121,8 @@
             name: '', text: '组件示例', current: true, children: [
               { name: 'pagination', text: '多功能分页' },
               { name: 'tree', text: '树形菜单' },
-              { name: 'laydate', text: '日期时间选择' }
+              { name: 'laydate', text: '日期时间选择' },
+              { name: 'modal', text: '模态框' }
             ]
           }
         ],

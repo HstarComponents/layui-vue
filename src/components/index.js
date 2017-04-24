@@ -27,6 +27,8 @@ import Tree from './tree/tree.vue';
 
 import Date from './date/date.vue';
 
+import Modal from './modal/modal.vue';
+
 export {
   Button, ButtonGroup,
   Progress,
@@ -38,7 +40,8 @@ export {
   Table, TableColumn,
   Pagination,
   Tree,
-  Date
+  Date,
+  Modal
 };
 
 export const COMPONENTS = [
@@ -52,5 +55,6 @@ export const COMPONENTS = [
   Table, TableColumn,
   Pagination,
   Tree,
-  Date
+  Date,
+  Modal
 ];
