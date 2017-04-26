@@ -49,7 +49,7 @@
     computed: {
       pageCount() {
         let pageCount = Math.ceil(this.totalCount / this.pageSize);
-        if (this.pageIndex > pageCount) {
+        if (this.pageIndex > pageCount && pageCount > 0) {
           this.pageIndex = pageCount;
         }
         return pageCount;

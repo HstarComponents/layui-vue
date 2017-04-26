@@ -29,6 +29,9 @@
       }
       this.$parent.items.push(this);
     },
+    mounted() {
+      this.shown = this.active;
+    },
     watch: {
       active(newVal) {
         this.shown = newVal;

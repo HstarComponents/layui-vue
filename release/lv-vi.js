@@ -550,6 +550,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
     this.$parent.items.push(this);
   },
+  mounted: function mounted() {
+    this.shown = this.active;
+  },
 
   watch: {
     active: function active(newVal) {
@@ -1230,7 +1233,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   computed: {
     pageCount: function pageCount() {
       var pageCount = Math.ceil(this.totalCount / this.pageSize);
-      if (this.pageIndex > pageCount) {
+      if (this.pageIndex > pageCount && pageCount > 0) {
         this.pageIndex = pageCount;
       }
       return pageCount;
