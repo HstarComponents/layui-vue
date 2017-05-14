@@ -25,7 +25,7 @@
         <a class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;" @click="doClose()"></a>
       </span>
       <div class="layui-layer-btn layui-layer-btn-">
-        <slot name="header">
+        <slot name="footer">
           <a class="layui-layer-btn0" @click="doOk">确定</a>
           <a class="layui-layer-btn1" @click="doClose(true)">取消</a>
         </slot>
