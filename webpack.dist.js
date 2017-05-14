@@ -1,12 +1,15 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
+
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: './src/index.js',
+  devtool: '#source-map',
   output: {
     path: path.resolve(__dirname, 'release'),
     publicPath: '/dist/',
-    filename: 'lv-vi.js',
+    filename: isProd ? 'lv-vi.min.js' : 'lv-vi.js',
     library: 'lv-ui',
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -49,8 +52,7 @@ module.exports = {
   }
 }
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+if (isProd) {
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

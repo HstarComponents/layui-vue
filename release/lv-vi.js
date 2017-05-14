@@ -1099,7 +1099,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = {
@@ -1662,7 +1661,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n", ""]);
+exports.push([module.i, "\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"tree.vue","sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -1676,7 +1675,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n.lv-pagination {\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, "\n.lv-pagination {\n  margin: 0;\n}\n", "", {"version":3,"sources":["/./src/components/pagination/pagination.vue?a9068f22"],"names":[],"mappings":";AACA;EACA,UAAA;CACA","file":"pagination.vue","sourcesContent":["<style>\r\n  .lv-pagination {\r\n    margin: 0;\r\n  }\r\n</style>\r\n<template>\r\n  <div class=\"lv-pagination layui-box layui-laypage\" :class=\"theme\">\r\n    <a href=\"javascript:;\" class=\"laypage_first\" v-if=\"showFirstLast\" @click.prevent=\"changeToPage(1)\">{{firstText}}</a>\r\n    <a href=\"javascript:;\" class=\"layui-laypage-prev\" v-if=\"showPrevNext\" :disabled=\"pageIndex <= 1\" @click.prevent=\"changeToPage(pageIndex - 1)\">{{prevText}}</a>\r\n    <template v-for=\"p in showPages\" v-if=\"!disabledPageNumber\">\r\n      <a href=\"javascript:;\" v-if=\"p.page !== pageIndex\" @click=\"changeToPage(p.page)\">{{p.text}}</a>\r\n      <span v-if=\"p.page === pageIndex\" class=\"layui-laypage-curr\" @click=\"changeToPage(p.page)\">\r\n        <em class=\"layui-laypage-em\"></em>\r\n        <em>{{p.text}}</em>\r\n      </span>\r\n    </template>\r\n    <a href=\"javascript:;\" class=\"layui-laypage-next\" v-if=\"showPrevNext\" @click.prevent=\"changeToPage(pageIndex + 1)\">{{nextText}}</a>\r\n    <a href=\"javascript:;\" class=\"layui-laypage-last\" v-if=\"showFirstLast\" @click.prevent=\"changeToPage(pageCount)\">{{lastText}}</a>\r\n    <template v-if=\"showGoto\">\r\n      <span class=\"layui-laypage-total\">到第<input type=\"number\" min=\"1\" :max=\"pageCount\" v-model.number=\"innerPageIndex\" class=\"layui-laypage-skip\" /> 页 \r\n      <button type=\"button\" class=\"layui-laypage-btn\" @click=\"changeToPage(innerPageIndex)\">确定</button></span>\r\n    </template>\r\n  </div>\r\n</template>\r\n<script>\r\n  export default {\r\n    name: 'lv-pagination',\r\n    props: {\r\n      pageSize: { type: Number, default: 20 },\r\n      totalCount: { type: Number, default: 0 },\r\n      maxItemCount: { type: Number, default: 5 },\r\n      firstText: { type: String, default: '首页' },\r\n      lastText: { type: String, default: '末页' },\r\n      prevText: { type: String, default: '上一页' },\r\n      nextText: { type: String, default: '下一页' },\r\n      showGoto: { type: Boolean, default: false },\r\n      showFirstLast: { type: Boolean, default: false },\r\n      showPrevNext: { type: Boolean, default: true },\r\n      theme: { type: String, default: '' },\r\n      disabledPageNumber: { type: Boolean, default: false },\r\n      value: null\r\n    },\r\n    data() {\r\n      return {\r\n        pageIndex: 1,\r\n        innerPageIndex: 1\r\n      };\r\n    },\r\n    computed: {\r\n      pageCount() {\r\n        let pageCount = Math.ceil(this.totalCount / this.pageSize);\r\n        if (this.pageIndex > pageCount && pageCount > 0) {\r\n          this.pageIndex = pageCount;\r\n        }\r\n        return pageCount;\r\n      },\r\n      showPages() {\r\n        let pages = [];\r\n        let allPage = Math.ceil(this.pageCount / this.maxItemCount);\r\n        let inPage = Math.ceil(this.pageIndex / this.maxItemCount);\r\n        let startIdx, endIdx;\r\n        startIdx = this.maxItemCount * (inPage - 1);\r\n        endIdx = Math.min(startIdx + this.maxItemCount, this.pageCount);\r\n        for (let i = startIdx + 1; i <= endIdx; i++) {\r\n          pages.push({ page: i, text: String(i) });\r\n        }\r\n        if (inPage < allPage) {\r\n          pages.push({ text: '...', page: endIdx + 1 });\r\n        }\r\n        if (inPage > 1) {\r\n          pages.unshift({ text: '...', page: startIdx - 1 });\r\n        }\r\n        return pages;\r\n      }\r\n    },\r\n    watch: {\r\n      pageIndex(newVal) {\r\n        if (newVal > this.pageCount) {\r\n          this.pageIndex = this.pageCount;\r\n        } else if (newVal <= 0) {\r\n          this.pageIndex = 1;\r\n        }\r\n        this.innerPageIndex = newVal;\r\n        this.$emit('input', this.pageIndex);\r\n      },\r\n      innerPageIndex(newVal) {\r\n        if (newVal > this.pageCount) {\r\n          this.innerPageIndex = this.pageCount;\r\n        } else if (newVal <= 0) {\r\n          this.innerPageIndex = 1;\r\n        }\r\n      },\r\n      value(newVal) {\r\n        this.pageIndex = Math.min(newVal, this.pageCount);\r\n      }\r\n    },\r\n    methods: {\r\n      changeToPage(page) {\r\n        this.pageIndex = page;\r\n      }\r\n    }\r\n  };\r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -1690,7 +1689,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n.lv-modal .layui-layer-page {\n  min-height: 260px;\n}\n.lv-modal .layui-layer-content {\n  min-height: 158px;\n}\n.lv-modal .layui-layer-btn.layui-layer-btn- {\n  border-top: 1px solid #eee;\n}\n", ""]);
+exports.push([module.i, "\n.lv-modal .layui-layer-page {\n  min-height: 260px;\n}\n.lv-modal .layui-layer-content {\n  min-height: 158px;\n}\n.lv-modal .layui-layer-btn.layui-layer-btn- {\n  border-top: 1px solid #eee;\n}\n", "", {"version":3,"sources":["/./src/components/modal/modal.vue?bd2961c2"],"names":[],"mappings":";AACA;EACA,kBAAA;CACA;AAEA;EACA,kBAAA;CACA;AAEA;EACA,2BAAA;CACA","file":"modal.vue","sourcesContent":["<style>\r\n  .lv-modal .layui-layer-page {\r\n    min-height: 260px;\r\n  }\r\n\r\n  .lv-modal .layui-layer-content {\r\n    min-height: 158px;\r\n  }\r\n\r\n  .lv-modal .layui-layer-btn.layui-layer-btn- {\r\n    border-top: 1px solid #eee;\r\n  }\r\n</style>\r\n<template>\r\n  <div class=\"lv-modal\" v-show=\"modalShown\">\r\n    <div class=\"layui-layer-shade\" style=\"z-index:100000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);\"></div>\r\n    <div class=\"layui-layer layui-layer-page layui-layer-rim layer-anim\" :style=\"modalStyle\">\r\n      <div class=\"layui-layer-title\" style=\"cursor: move;\">\r\n        <slot name=\"header\">{{header}}</slot>\r\n      </div>\r\n      <div class=\"layui-layer-content\">\r\n        <slot></slot>\r\n      </div>\r\n      <span class=\"layui-layer-setwin\">\r\n        <a class=\"layui-layer-ico layui-layer-close layui-layer-close1\" href=\"javascript:;\" @click=\"doClose()\"></a>\r\n      </span>\r\n      <div class=\"layui-layer-btn layui-layer-btn-\">\r\n        <slot name=\"header\">\r\n          <a class=\"layui-layer-btn0\" @click=\"doOk\">确定</a>\r\n          <a class=\"layui-layer-btn1\" @click=\"doClose(true)\">取消</a>\r\n        </slot>\r\n      </div>\r\n      <span class=\"layui-layer-resize\"></span>\r\n    </div>\r\n  </div>\r\n</template>\r\n<script>\r\n  import { domUtil } from './../../utils';\r\n  export default {\r\n    name: 'lv-modal',\r\n    props: {\r\n      header: { type: String, default: '' },\r\n      width: { type: Number, default: 600 },\r\n      value: { type: Boolean, default: false }\r\n    },\r\n    data() {\r\n      return {\r\n        modalShown: false,\r\n        modalStyle: {\r\n          'z-index': 100001,\r\n          'min-height': '260px',\r\n          width: '600px',\r\n          top: 'auto',\r\n          left: 'auto'\r\n        },\r\n        events: []\r\n      };\r\n    },\r\n    mounted() {\r\n      this.modalShown = this.value === true;\r\n      this.calcModalStyle();\r\n      let evtObj = domUtil.bindEvent(window, 'resize', () => {\r\n        this.calcModalStyle();\r\n      });\r\n      this.events.push(evtObj);\r\n    },\r\n    beforeDestroy() {\r\n      this.events.forEach(e => e.destroy());\r\n    },\r\n    watch: {\r\n      value(newVal) {\r\n        this.modalShown = newVal;\r\n        if (newVal) {\r\n          this.calcModalStyle();\r\n        }\r\n      },\r\n      width(newVal) {\r\n        this.calcModalStyle();\r\n      }\r\n    },\r\n    methods: {\r\n      calcModalStyle(stop) {\r\n        this.modalStyle.width = `${this.width}px`;\r\n        let modalEl = this.$el.querySelector('.layui-layer-page');\r\n        let size = domUtil.getSize(modalEl);\r\n        this.modalStyle.left = `${(window.innerWidth - size.width) / 2}px`;\r\n        this.modalStyle.top = `${(window.innerHeight - size.height) / 2}px`;\r\n        if (!stop) {\r\n          this.$nextTick(() => {\r\n            this.calcModalStyle(true);\r\n          });\r\n        }\r\n      },\r\n      doOk() {\r\n        this.$emit('ok');\r\n      },\r\n      doClose(isCancel) {\r\n        this.modalShown = false;\r\n        this.$emit('input', false);\r\n        this.$emit(isCancel ? 'cancel' : 'close');\r\n      }\r\n    }\r\n  };\r\n\r\n</script>\r\n"],"sourceRoot":"webpack://"}]);
 
 // exports
 
@@ -2996,7 +2995,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "cursor": "move"
     }
-  }, [_vm._t("header"), _vm._v(" "), (!_vm.$slots.header) ? [_vm._v(_vm._s(_vm.header))] : _vm._e()], 2), _vm._v(" "), _c('div', {
+  }, [_vm._t("header", [_vm._v(_vm._s(_vm.header))])], 2), _vm._v(" "), _c('div', {
     staticClass: "layui-layer-content"
   }, [_vm._t("default")], 2), _vm._v(" "), _c('span', {
     staticClass: "layui-layer-setwin"
@@ -3012,7 +3011,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "layui-layer-btn layui-layer-btn-"
-  }, [(!_vm.$slots.footer) ? [_c('a', {
+  }, [_vm._t("header", [_c('a', {
     staticClass: "layui-layer-btn0",
     on: {
       "click": _vm.doOk
@@ -3024,7 +3023,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.doClose(true)
       }
     }
-  }, [_vm._v("取消")])] : _vm._e()], 2), _vm._v(" "), _c('span', {
+  }, [_vm._v("取消")])])], 2), _vm._v(" "), _c('span', {
     staticClass: "layui-layer-resize"
   })])])
 },staticRenderFns: []}
@@ -3072,13 +3071,13 @@ var content = __webpack_require__(26);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("70717377", content, false);
+var update = __webpack_require__(2)("c6e729ce", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-51bc48e7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./tree.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-51bc48e7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./tree.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-51bc48e7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./tree.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-51bc48e7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./tree.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -3098,13 +3097,13 @@ var content = __webpack_require__(27);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7cb7b888", content, false);
+var update = __webpack_require__(2)("e1c94c44", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-754ee2a7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pagination.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-754ee2a7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pagination.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-754ee2a7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pagination.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-754ee2a7\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pagination.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -3124,13 +3123,13 @@ var content = __webpack_require__(28);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("53e1f784", content, false);
+var update = __webpack_require__(2)("a9b417bc", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-ccf0f77a\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-ccf0f77a\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-ccf0f77a\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js?sourceMap!../../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-ccf0f77a\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -3208,3 +3207,4 @@ var lvUI = {
 /***/ })
 /******/ ]);
 });
+//# sourceMappingURL=lv-vi.js.map

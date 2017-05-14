@@ -2,11 +2,11 @@
   .lv-modal .layui-layer-page {
     min-height: 260px;
   }
-  
+
   .lv-modal .layui-layer-content {
     min-height: 158px;
   }
-  
+
   .lv-modal .layui-layer-btn.layui-layer-btn- {
     border-top: 1px solid #eee;
   }
@@ -16,8 +16,7 @@
     <div class="layui-layer-shade" style="z-index:100000; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
     <div class="layui-layer layui-layer-page layui-layer-rim layer-anim" :style="modalStyle">
       <div class="layui-layer-title" style="cursor: move;">
-        <slot name="header"></slot>
-        <template v-if="!$slots.header">{{header}}</template>
+        <slot name="header">{{header}}</slot>
       </div>
       <div class="layui-layer-content">
         <slot></slot>
@@ -26,10 +25,10 @@
         <a class="layui-layer-ico layui-layer-close layui-layer-close1" href="javascript:;" @click="doClose()"></a>
       </span>
       <div class="layui-layer-btn layui-layer-btn-">
-        <template v-if="!$slots.footer">
+        <slot name="header">
           <a class="layui-layer-btn0" @click="doOk">确定</a>
           <a class="layui-layer-btn1" @click="doClose(true)">取消</a>
-        </template>
+        </slot>
       </div>
       <span class="layui-layer-resize"></span>
     </div>
