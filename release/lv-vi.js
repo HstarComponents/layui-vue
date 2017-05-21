@@ -911,6 +911,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return console.warn('Must provider array.');
       }
       if (data.length === 0) {
+        this.dataList = [];
         return;
       }
       // 判断是否是简单类型（字符串，数字）
