@@ -45,9 +45,7 @@
     methods: {
       setValue() {
         let selectdItem = this.dataList.find(x => x.value === this.value);
-        if (selectdItem) {
-          this.innerText = selectdItem.text;
-        }
+        this.innerText = (selectdItem || {}).text;
       },
       setDataList() {
         let data = this.dataSource;
