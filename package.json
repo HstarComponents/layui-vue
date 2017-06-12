@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hstarorg/lv-ui.git"
+    "url": "git+https://github.com/HstarComponents/lv-ui.git"
   },
   "keywords": [
     "Layui",
@@ -23,9 +23,9 @@
   "author": "Jay.M.Hu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hstarorg/lv-ui/issues"
+    "url": "https://github.com/HstarComponents/lv-ui/issues"
   },
-  "homepage": "https://github.com/hstarorg/lv-ui#readme",
+  "homepage": "https://github.com/HstarComponents/lv-ui#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.0.0",
