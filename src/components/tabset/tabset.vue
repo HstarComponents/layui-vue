@@ -39,6 +39,7 @@
         this.tabItems.forEach((item, idx2) => {
           item.show = idx2 === idx;
         });
+        this.$emit('select-index-changed', idx);
       },
       removeItem(item, evt) {
         evt && evt.stopPropagation();

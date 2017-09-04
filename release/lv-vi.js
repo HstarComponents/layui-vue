@@ -899,9 +899,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var selectdItem = this.dataList.find(function (x) {
         return x.value === _this.value;
       });
-      if (selectdItem) {
-        this.innerText = selectdItem.text;
-      }
+      this.innerText = (selectdItem || {}).text;
     },
     setDataList: function setDataList() {
       var _this2 = this;
@@ -1558,6 +1556,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.tabItems.forEach(function (item, idx2) {
         item.show = idx2 === idx;
       });
+      this.$emit('select-index-changed', idx);
     },
     removeItem: function removeItem(item, evt) {
       evt && evt.stopPropagation();
