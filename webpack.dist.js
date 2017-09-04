@@ -7,9 +7,9 @@ module.exports = {
   entry: './src/index.js',
   devtool: '#source-map',
   output: {
-    path: path.resolve(__dirname, 'release'),
+    path: path.resolve(__dirname, 'lib'),
     publicPath: '/dist/',
-    filename: isProd ? 'lv-vi.min.js' : 'lv-vi.js',
+    filename: isProd ? 'lv-ui.min.js' : 'lv-ui.js',
     library: 'lv-ui',
     libraryTarget: 'umd',
     umdNamedDefine: true

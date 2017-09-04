@@ -1,3 +1,6 @@
+import Home from './home/Home.vue';
+import DemoContainer from './demo-container/DemoContainer.vue';
+
 import WelcomePage from './WelcomePage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 
@@ -17,6 +20,9 @@ import LayDatePage from './LayDatePage.vue';
 import ModalPage from './ModalPage.vue';
 
 export {
+  Home,
+  DemoContainer,
+
   WelcomePage,
   NotFoundPage,
 

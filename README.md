@@ -42,4 +42,7 @@ npm i
 
 # Run the examples app
 npm run dev
+
+# pulish lib
+npm run dist
 ```
