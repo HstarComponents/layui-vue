@@ -1,5 +1,6 @@
 import Home from './home/Home.vue';
 import DemoContainer from './demo-container/DemoContainer.vue';
+import Praise from './praise/Praise.vue';
 
 import WelcomePage from './WelcomePage.vue';
 import NotFoundPage from './NotFoundPage.vue';
@@ -21,6 +22,7 @@ import ModalPage from './ModalPage.vue';
 
 export {
   Home,
+  Praise,
   DemoContainer,
 
   WelcomePage,

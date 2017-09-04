@@ -19,32 +19,15 @@
   <div id="app" class="layui-layout layui-layout-admin">
     <div class="layui-header">
       <div class="layui-logo">LV-UI</div>
-      <!-- 头部区域（可配合layui已有的水平导航） -->
-      <ul class="layui-nav layui-layout-left">
-        <li class="layui-nav-item"><a href="">控制台</a></li>
-        <li class="layui-nav-item"><a href="">商品管理</a></li>
-        <li class="layui-nav-item"><a href="">用户</a></li>
-        <li class="layui-nav-item">
-          <a href="javascript:;">其它系统</a>
-          <dl class="layui-nav-child">
-            <dd><a href="">邮件管理</a></dd>
-            <dd><a href="">消息管理</a></dd>
-            <dd><a href="">授权管理</a></dd>
-          </dl>
-        </li>
-      </ul>
       <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
-          <a href="javascript:;">
-                <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                贤心
-              </a>
-          <dl class="layui-nav-child">
-            <dd><a href="">基本资料</a></dd>
-            <dd><a href="">安全设置</a></dd>
-          </dl>
+          <router-link to="/">首页</router-link>
         </li>
-        <li class="layui-nav-item"><a href="">退了</a></li>
+        <li class="layui-nav-item"><a href="https://github.com/hstarorg/lv-ui/issues/new" target="_blank">提交Bug</a></li>
+        <li class="layui-nav-item"><a href="https://github.com/hstarorg/lv-ui/" target="_blank">Git仓库</a></li>
+        <li class="layui-nav-item">
+          <router-link to="/praise">打赏我</router-link>
+        </li>
       </ul>
     </div>
     <div class="layui-side layui-bg-black">
@@ -54,7 +37,7 @@
           <li class="layui-nav-item layui-nav-itemed" v-for="m1 in menus">
             <a class="" href="javascript:;">{{m1.text}}</a>
             <dl class="layui-nav-child">
-              <dd v-for="m2 in m1.children">
+              <dd v-for="m2 in m1.children" :class="{'layui-this': m2.active}">
                 <router-link :to="m2.path"><i :class="m2.icon"></i> {{m2.text}}</router-link>
               </dd>
             </dl>
@@ -65,13 +48,6 @@
     <div class="layui-body site-demo">
       <router-view></router-view>
     </div>
-    <!-- <div class="layui-footer footer footer-demo">
-      <div class="layui-main">
-        <p>
-          2017 © <a href="https://github.com/hstarorg/">hstarorg</a> <a href="https://github.com/hstarorg/lv-ui/" target="_blank">Git仓库</a>
-        </p>
-      </div>
-    </div> -->
     <div class="site-tree-mobile layui-hide">
       <i class="layui-icon"></i>
     </div>
@@ -84,9 +60,9 @@
   export default {
     data() {
       return {
-        systemName: 'AdminLTE UI DEMO',
         menus: [], // 菜单
-        breadcrumbs: [] // 面包屑
+        breadcrumbs: [], // 面包屑
+        prevMenu: null
       };
     },
     created() {
@@ -97,10 +73,12 @@
       $route(r) {
         eventBus.emit('route-change', r.path);
         this._setBreadcrumb(r.path);
+        this._setSelectedMenu(r.path);
       }
     },
     mounted() {
       layui.element.init();
+      this._setSelectedMenu(this.$route.path);
     },
     methods: {
       _loadSystemMenus() {
@@ -111,6 +89,7 @@
       _processMenus(menus, parent) {
         menus.forEach(m => {
           m.$parent = parent;
+          m.active = false;
           m.hasChildren = m.children && m.children.length > 0;
           if (m.hasChildren) {
             this._processMenus(m.children, m);
@@ -140,11 +119,22 @@
         }
         return null;
       },
-      setCurrentMenu(menu, evt) {
-        evt && evt.stopPropagation();
-        this.prevMenu && this.$set(this.prevMenu, 'current', false);
-        this.$set(menu, 'current', true);
-        this.prevMenu = menu;
+      _setSelectedMenu(url) {
+        this._setMenuStatus(this.prevMenu, false);
+        let menu = this._searchCurrentMenu(url, this.menus);
+        if (menu) {
+          this.prevMenu = menu;
+          this._setMenuStatus(menu, true);
+        }
+      },
+      _setMenuStatus(menu, active) {
+        if (!menu) {
+          return;
+        }
+        menu.active = active;
+        if (menu.parent) {
+          this._setMenuStatus(menu.parent, active);
+        }
       }
     }
   }

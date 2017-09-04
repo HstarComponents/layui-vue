@@ -5,12 +5,14 @@ Vue.use(VueRouter);
 
 import {
   DemoContainer,
+  Praise,
   Home
 } from './pages';
 
 /* 路由配置 */
 const routes = [
   { path: '/', component: Home },
+  { path: '/praise', component: Praise },
   { path: '*', component: DemoContainer }
 ];
 
