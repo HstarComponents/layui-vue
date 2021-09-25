@@ -1356,6 +1356,13 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/webpack-chain@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.nlark.com/@types/webpack-chain/download/@types/webpack-chain-5.2.0.tgz#ccd2d75d57e962ad7372077701ce2c711fc985c6"
+  integrity sha1-zNLXXVfpYq1zcgd3Ac4scR/JhcY=
+  dependencies:
+    webpack-chain "*"
+
 "@types/webpack-dev-server@^3.11.0":
   version "3.11.6"
   resolved "https://registry.nlark.com/@types/webpack-dev-server/download/@types/webpack-dev-server-3.11.6.tgz#d8888cfd2f0630203e13d3ed7833a4d11b8a34dc"
@@ -10565,7 +10572,7 @@ webpack-bundle-analyzer@^3.8.0:
     opener "^1.5.1"
     ws "^6.0.0"
 
-webpack-chain@^6.4.0:
+webpack-chain@*, webpack-chain@^6.4.0:
   version "6.5.1"
   resolved "https://registry.npm.taobao.org/webpack-chain/download/webpack-chain-6.5.1.tgz#4f27284cbbb637e3c8fbdef43eef588d4d861206"
   integrity sha1-TycoTLu2N+PI+970Pu9YjU2GEgY=
