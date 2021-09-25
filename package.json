@@ -2,20 +2,17 @@
   "name": "layui-vue",
   "version": "0.1.0",
   "description": "Layui vue version.",
-  "main": "dist/layui-react.js",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
-    "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dist": "webpack --config ./webpack.dist.js --progress --hide-modules && cross-env NODE_ENV=production webpack --config ./webpack.dist.js --progress --hide-modules",
-    "test": "test"
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HstarComponents/lv-ui.git"
+    "url": "git+https://github.com/HstarComponents/layui-vue.git"
   },
   "keywords": [
     "Layui",
@@ -24,25 +21,38 @@
   "author": "Jay.M.Hu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HstarComponents/lv-ui/issues"
+    "url": "https://github.com/HstarComponents/layui-vue/issues"
   },
-  "homepage": "https://github.com/HstarComponents/lv-ui#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/HstarComponents/layui-vue#readme",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
   "devDependencies": {
-    "axios": "^0.16.2",
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-latest": "^6.0.0",
-    "cross-env": "^3.0.0",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "vue": "^2.2.1",
-    "vue-loader": "^11.1.4",
-    "vue-router": "^2.3.0",
-    "vue-template-compiler": "^2.2.1",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "@types/jest": "^24.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "~4.1.5",
+    "vue-jest": "^5.0.0-0"
   }
 }

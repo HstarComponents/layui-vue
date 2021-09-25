@@ -1,4 +1,5 @@
-# lv-ui
+# layui-vue
+
 将Layui制作为Vue2组件。（UI一直是个痛，那就先基于现有的UI，先封装几套玩玩。）
 
 对应的LayUI版本为：`1.0.9_rls`，[LayUI 源码仓库](https://github.com/sentsin/layui)
@@ -34,15 +35,18 @@
 # How to Run?
 
 ```bash
-# Clone the project
-git clone 
+# Project setup
+yarn install
 
-# Install dependencies
-npm i 
+# Compiles and hot-reloads for development
+yarn serve
 
-# Run the examples app
-npm run dev
+# Compiles and minifies for production
+yarn build
 
-# pulish lib
-npm run dist
+# Run your unit tests
+yarn test:unit
+
+# Lints and fixes files
+yarn lint
 ```
