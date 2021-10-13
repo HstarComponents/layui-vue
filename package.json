@@ -4,7 +4,8 @@
   "description": "Layui vue version.",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "start": "npm run serve",
+    "docs:build": "vuepress build docs",
+    "start": "npm run docs:dev",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:lib": "vue-cli-service build --target lib",
