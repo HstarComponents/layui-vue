@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Layui vue version.",
   "scripts": {
+    "docs:dev": "vuepress dev docs",
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -25,7 +26,6 @@
   },
   "homepage": "https://github.com/HstarComponents/layui-vue#readme",
   "dependencies": {
-   
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
