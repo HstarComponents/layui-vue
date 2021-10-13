@@ -15,3 +15,10 @@ export const withInstall = <T, E extends Record<string, any>>(
   }
   return main as any & E;
 };
+
+export const stringEnum = (arr: string[]) => {
+  return (value: string) => {
+    // 这个值必须匹配下列字符串中的一个
+    return arr.includes(value);
+  };
+};
