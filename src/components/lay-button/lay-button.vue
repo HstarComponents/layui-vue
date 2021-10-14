@@ -1,4 +1,3 @@
-
 <template>
   <button type="button" class="layui-btn" :class="rootClass">
     <slot></slot>
@@ -13,18 +12,13 @@ export default defineComponent({
   props: {
     type: {
       type: String,
-      validator: stringEnum([
-        'primary',
-        'normal',
-        'warm',
-        'danger',
-        'disabled',
-      ]),
+      validator: stringEnum(['primary', 'normal', 'warm', 'danger']),
     },
     size: {
       type: String,
       validator: stringEnum(['lg', 'sm', 'xs']),
     },
+    disabled: { type: Boolean },
     block: {
       type: Boolean,
     },
@@ -38,6 +32,9 @@ export default defineComponent({
       const buttonGroupProps = this.$parent?.$props as any;
       const classList: string[] = [];
       const type = this.type || buttonGroupProps.type;
+      if (this.disabled) {
+        classList.push(`layui-btn-disabled`);
+      }
       if (type) {
         classList.push(`layui-btn-${type}`);
       }

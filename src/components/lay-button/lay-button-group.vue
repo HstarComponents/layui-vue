@@ -1,4 +1,3 @@
-
 <template>
   <div class="layui-btn-group">
     <slot />
@@ -15,13 +14,7 @@ export default defineComponent({
   props: {
     type: {
       type: String,
-      validator: stringEnum([
-        'primary',
-        'normal',
-        'warm',
-        'danger',
-        'disabled',
-      ]),
+      validator: stringEnum(['primary', 'normal', 'warm', 'danger']),
     },
     size: { type: String, validator: stringEnum(['lg', 'sm', 'xs']) },
   },

@@ -5,7 +5,7 @@
     <lay-button type="normal">百搭按钮</lay-button>
     <lay-button type="warm">暖色按钮</lay-button>
     <lay-button type="danger">警告按钮</lay-button>
-    <lay-button type="disabled">禁用按钮</lay-button>
+    <lay-button disabled>禁用按钮</lay-button>
   </lay-fieldset>
   <lay-fieldset legend="尺寸" simple>
     <lay-button size="lg">大型按钮</lay-button>
@@ -17,7 +17,7 @@
     <lay-button size="lg" type="normal">大型百搭</lay-button>
     <lay-button type="warm">大型百搭</lay-button>
     <lay-button size="sm" type="danger">小型警告</lay-button>
-    <lay-button size="xs" type="disabled">迷你禁用</lay-button>
+    <lay-button size="xs" disabled>迷你禁用</lay-button>
     <br />
     <br />
     <lay-button block>流体按钮（最大化适应）</lay-button>
@@ -31,13 +31,13 @@
     <lay-button type="normal" radius>百搭按钮</lay-button>
     <lay-button type="warm" radius>暖色按钮</lay-button>
     <lay-button type="danger" radius>警告按钮</lay-button>
-    <lay-button type="disabled" radius>禁用按钮</lay-button>
+    <lay-button disabled radius>禁用按钮</lay-button>
     <br />
     <br />
     <lay-button size="lg" type="normal" radius>大型百搭</lay-button>
     <lay-button type="warm" radius>大型百搭</lay-button>
     <lay-button size="sm" type="danger" radius>小型警告</lay-button>
-    <lay-button size="xs" type="disabled" radius>迷你禁用</lay-button>
+    <lay-button size="xs" disabled radius>迷你禁用</lay-button>
   </lay-fieldset>
   <lay-fieldset legend="按钮容器" simple>
     <lay-button-container>
