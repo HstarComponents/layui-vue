@@ -34,19 +34,20 @@
 
 # How to Run?
 
+> 推荐使用 pnpm 作为包管理工具
+
 ```bash
-# Project setup
-yarn install
+# Project init
+pnpm i
 
-# Compiles and hot-reloads for development
-yarn serve
+# DEV 构建开发环境，然后打开：http://localhost:8080
+pnpm start
+# or
+pnpm run docs:dev
 
-# Compiles and minifies for production
-yarn build
+# 编译文档
+pnpm run docs:build
 
-# Run your unit tests
-yarn test:unit
-
-# Lints and fixes files
-yarn lint
+# 打包lib
+pnpm run build
 ```

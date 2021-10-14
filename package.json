@@ -2,13 +2,13 @@
   "name": "layui-vue",
   "version": "0.1.0",
   "description": "Layui vue version.",
+  "main": "dist/layui-vue.common.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "start": "npm run docs:dev",
+    "start": "pnpm run docs:dev",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib",
+    "build": "vue-cli-service build --target lib --name layui-vue src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
