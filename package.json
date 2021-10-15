@@ -4,8 +4,8 @@
   "description": "Layui vue version.",
   "main": "dist/layui-vue.common.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress-vite dev docs",
+    "docs:build": "vuepress-vite build docs",
     "start": "pnpm run docs:dev",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name layui-vue src/index.ts",
@@ -43,7 +43,6 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-0",
-    "@vuepress/bundler-webpack": "^2.0.0-alpha.1",
     "@vuepress/plugin-register-components": "^2.0.0-beta.26",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
