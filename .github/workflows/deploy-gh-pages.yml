@@ -34,3 +34,14 @@ jobs:
 
       - run: pnpm i
       - run: pnpm run docs:build
+
+      - name: GH Pages deploy
+        # You may pin to the exact commit or the version.
+        # uses: Cecilapp/GitHub-Pages-deploy@a6f0cf12a4874fbeb75f6393d0568fb3c86dda37
+        uses: Cecilapp/GitHub-Pages-deploy@3.2.0
+        with:
+          # A verified email.
+          email: hm910705@163.com
+          # Where static files are.
+          build_dir: docs/.vuepress/dist
+
