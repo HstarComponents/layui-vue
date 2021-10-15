@@ -26,7 +26,6 @@
     "url": "https://github.com/HstarComponents/layui-vue/issues"
   },
   "homepage": "https://github.com/HstarComponents/layui-vue#readme",
-  "dependencies": {},
   "peerDependencies": {
     "vue": "^3.0.0"
   },
@@ -44,6 +43,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-0",
+    "@vuepress/bundler-webpack": "^2.0.0-alpha.1",
     "@vuepress/plugin-register-components": "^2.0.0-beta.26",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
