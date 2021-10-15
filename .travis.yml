@@ -2,9 +2,9 @@ language: node_js
 node_js:
   - lts/*
 install:
-  - pnpm install # npm ci
+  - npm install # npm ci
 script:
-  - pnpm run docs:build # npm run docs:build
+  - npm run docs:build # npm run docs:build
 deploy:
   provider: pages
   skip_cleanup: true
