@@ -1,0 +1,1 @@
+const t={key:"v-360bf8ea",path:"/components/blockquote.html",title:"Blockquote \u5F15\u7528",lang:"en-US",frontmatter:{},excerpt:"",headers:[],filePathRelative:"components/blockquote.md",git:{updatedTime:163439718e4,contributors:[{name:"hstarorg",email:"hm910705@163.com",commits:1}]}};export{t as data};

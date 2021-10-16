@@ -1,1 +1,0 @@
-const e={key:"v-6bae6f7a",path:"/components/Menu.html",title:"Menu",lang:"en-US",frontmatter:{},excerpt:"",headers:[],filePathRelative:"components/Menu.md",git:{updatedTime:1634399274e3,contributors:[{name:"Jay.M.Hu",email:"1028332273@qq.com",commits:1}]}};export{e as data};
