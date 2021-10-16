@@ -26,8 +26,9 @@ module.exports = {
       {
         text: '数据展示', // 必要的
         children: [
+          { text: 'Blockquote 引用', link: '/components/blockquote.html' },
+          { text: 'Card 卡片', link: '/components/card.html' },
           { text: 'Fieldset 字段集', link: '/components/fieldset.html' },
-          { text: 'blockquote 引用', link: '/components/blockquote.html' },
         ],
       },
       //   {
