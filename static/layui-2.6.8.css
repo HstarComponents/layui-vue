@@ -50,7 +50,7 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-blockquote,
+
 body,
 button,
 dd,
@@ -1455,19 +1455,6 @@ a cite {
   -webkit-transition: all 0.3s;
   box-sizing: border-box;
 }
-.layui-elem-quote {
-  margin-bottom: 10px;
-  padding: 15px;
-  line-height: 1.6;
-  border-left: 5px solid #5fb878;
-  border-radius: 0 2px 2px 0;
-  background-color: #fafafa;
-}
-.layui-quote-nm {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  background: 0 0;
-}
 
 .layui-progress {
   position: relative;
@@ -1541,8 +1528,6 @@ a cite {
   top: 0;
   font-size: 14px;
 }
-.layui-card-body,
-.layui-card-header,
 .layui-form-label,
 .layui-form-mid,
 .layui-form-select,
@@ -1552,44 +1537,12 @@ a cite {
 .layui-textarea {
   position: relative;
 }
-.layui-card {
-  margin-bottom: 15px;
-  border-radius: 2px;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
+
 .layui-form-select dl,
 .layui-panel {
   box-shadow: 1px 1px 4px rgb(0 0 0 / 8%);
 }
-.layui-card:last-child {
-  margin-bottom: 0;
-}
-.layui-card-header {
-  height: 42px;
-  line-height: 42px;
-  padding: 0 15px;
-  border-bottom: 1px solid #f6f6f6;
-  color: #333;
-  border-radius: 2px 2px 0 0;
-  font-size: 14px;
-}
-.layui-card-body {
-  padding: 10px 15px;
-  line-height: 24px;
-}
-.layui-card-body[pad15] {
-  padding: 15px;
-}
-.layui-card-body[pad20] {
-  padding: 20px;
-}
-.layui-card-body .layui-table {
-  margin: 5px 0;
-}
-.layui-card .layui-tab {
-  margin: 0;
-}
+
 .layui-panel {
   border-width: 1px;
   border-style: solid;
@@ -1666,7 +1619,6 @@ a cite {
 .layui-layedit,
 .layui-layedit-tool,
 .layui-panel,
-.layui-quote-nm,
 .layui-select,
 .layui-tab-bar,
 .layui-tab-card,
