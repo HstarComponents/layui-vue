@@ -64,6 +64,10 @@
       <lay-button>按钮三</lay-button>
     </lay-button-group>
   </lay-fieldset>
+  <lay-fieldset legend="事件处理" simple>
+    <lay-button @click="handleClick">点我试试</lay-button>
+    <lay-button disabled @click="handleClick">点我没反应</lay-button>
+  </lay-fieldset>
 </template>
 
 <script lang="ts">
@@ -81,6 +85,11 @@ export default defineComponent({
     LayButtonGroup,
     LayButtonContainer,
     LayFieldset,
+  },
+  methods: {
+    handleClick() {
+      alert('你点击了按钮！');
+    },
   },
   setup() {
     return {};

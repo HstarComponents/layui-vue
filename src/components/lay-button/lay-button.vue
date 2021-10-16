@@ -1,5 +1,10 @@
 <template>
-  <button type="button" class="layui-btn" :class="rootClass">
+  <button
+    type="button"
+    class="layui-btn"
+    :class="rootClass"
+    @click="handleClick"
+  >
     <slot></slot>
   </button>
 </template>
@@ -24,6 +29,7 @@ export default defineComponent({
     },
     radius: { type: Boolean },
   },
+  emits: ['click'],
   data() {
     return {};
   },
@@ -52,6 +58,15 @@ export default defineComponent({
       return classList;
     },
   },
-  setup() {},
+  methods: {
+    handleClick(evt: any) {
+      if (!this.disabled) {
+        this.$emit('click', evt);
+      }
+    },
+  },
+  setup() {
+    return {};
+  },
 });
 </script>
