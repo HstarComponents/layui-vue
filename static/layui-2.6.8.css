@@ -50,7 +50,7 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-blockquote,
+
 body,
 button,
 dd,
@@ -1455,19 +1455,7 @@ a cite {
   -webkit-transition: all 0.3s;
   box-sizing: border-box;
 }
-.layui-elem-quote {
-  margin-bottom: 10px;
-  padding: 15px;
-  line-height: 1.6;
-  border-left: 5px solid #5fb878;
-  border-radius: 0 2px 2px 0;
-  background-color: #fafafa;
-}
-.layui-quote-nm {
-  border-style: solid;
-  border-width: 1px 1px 1px 5px;
-  background: 0 0;
-}
+
 
 .layui-progress {
   position: relative;
@@ -1666,7 +1654,6 @@ a cite {
 .layui-layedit,
 .layui-layedit-tool,
 .layui-panel,
-.layui-quote-nm,
 .layui-select,
 .layui-tab-bar,
 .layui-tab-card,
