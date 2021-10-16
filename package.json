@@ -4,8 +4,8 @@
   "description": "Layui vue version.",
   "main": "dist/layui-vue.common.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress-vite dev docs",
+    "docs:build": "vuepress-vite build docs",
     "start": "pnpm run docs:dev",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name layui-vue src/index.ts",
@@ -26,12 +26,8 @@
     "url": "https://github.com/HstarComponents/layui-vue/issues"
   },
   "homepage": "https://github.com/HstarComponents/layui-vue#readme",
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
@@ -40,10 +36,8 @@
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-prettier": "^6.0.0",

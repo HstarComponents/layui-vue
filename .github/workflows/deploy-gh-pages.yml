@@ -5,7 +5,7 @@ name: deploy-gh-pages
 
 on:
   push:
-    branches: [master]
+    branches: [vue3]
   pull_request:
     branches: [master]
 
@@ -19,14 +19,28 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      # Checkout
       - uses: actions/checkout@v2
-
+      # Set pnpm
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+        with:
+          version: 6.10.0
+      # use nodejs
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-          
-      - run: npm i
-      - run: npm run docs:build
+          node-version: '14'
+          cache: 'pnpm'
+
+      - run: pnpm i
+      - run: pnpm run docs:build
+
+      - name: Deploy
+        # You may pin to the exact commit or the version.
+        # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
+        uses: crazy-max/ghaction-github-pages@v2.5.0
+        with:
+          # Build directory to deploy
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}

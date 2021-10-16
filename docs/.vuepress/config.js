@@ -1,6 +1,7 @@
 const { path } = require('@vuepress/utils');
 
 module.exports = {
+  base: '/layui-vue/',
   title: 'Layui for Vue',
   description: 'The demo site',
   plugins: [
