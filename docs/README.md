@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Layui for vue3
-tagline: 副标题待定
+tagline: Hi, LayUI
 actionText: 查看组件 →
 actionLink: /components/
 features:

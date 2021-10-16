@@ -1,7 +1,8 @@
 ---
-title: Blogging Like a Hacker
+title: 组件
+description: LayUI 组件集合
 ---
+
 ## Components
 
-此处是是组件泪飙
-
+点击左侧菜单浏览全量组件
